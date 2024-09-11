@@ -24,13 +24,16 @@ import ru.iteco.fmhandroid.R;
 
 
 public class LoginSteps {
-    public void waitAuthorizationPage() {
+
+  public void waitAuthorizationPage() { /* public void waitAuthorizationPage() {
         Allure.step("Загрузка страницы авторизации");
         onView(isRoot()).perform(waitDisplayed(R.id.enter_button, 15000));
         onView(allOf(withId(R.id.enter_button), withText("SIGN IN"))).check(matches(isDisplayed()));
 
-
-    }
+    }*/
+      Allure.step("Загрузка страницы авторизации");
+      authorization.check(matches(isDisplayed()));
+  }
 
     public  void isLogInElements() {
         Allure.step("Проверка наличия данных авторизации");

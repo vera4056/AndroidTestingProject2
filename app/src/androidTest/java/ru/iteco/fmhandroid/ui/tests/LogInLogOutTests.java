@@ -24,9 +24,11 @@ public class LogInLogOutTests {
     public ActivityScenarioRule<AppActivity> mActivityScenarioRule =
             new ActivityScenarioRule<>(AppActivity.class);
 
+
+
     @Before
     public void waitForLoginFieldId () throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         try {
             loginSteps.waitAuthorizationPage();
         } catch (NoMatchingViewException e) {
@@ -34,8 +36,7 @@ public class LogInLogOutTests {
             logOutSteps.logOut();
             loginSteps.waitAuthorizationPage();
 
-    }
-
+        }
     }
 
     LoginSteps loginSteps = new LoginSteps();
